@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drag And Drop</title>
+    <style>
+      [droppable]:not(body) h1 {
+        margin: 0;
+        display: inline-block;
+      }
+      html, body {
+        margin: 0 50px;
+        height: 100dvh;
+        height: 100vh;
+      }
+      .flex {
+        display: flex !important;
+      }
+      .box {
+        width: 24%;
+        flex-grow: 1;
+        display: block;
+        padding: 2rem;
+        aspect-ratio: 1618;
+        border: 0.5em double blue;
+      }
+    </style>
+
+    <script src="app.js" defer></script>
+  </head>
+  <body droppable>
+    <div class="flex">
+      <div class="box" droppable></div>
+      <div class="box" droppable></div>
+      <div class="box" droppable></div>
+      <div class="box" droppable></div>
+    </div>
+
+    <h1 draggable="true" id="react">React</h1>
+    <h1 draggable="true" id="vue">Vue</h1>
+    <h1 draggable="true" id="angular">Angular</h1>
+    <h1 draggable="true" id="js">JS</h1>
+  </body>
+</html>
