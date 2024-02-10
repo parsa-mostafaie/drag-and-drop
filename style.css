@@ -1,0 +1,26 @@
+html,
+body {
+  margin: 0 50px;
+  height: 100dvh;
+  height: 100vh;
+}
+
+.flex {
+  display: flex !important;
+}
+.box {
+  width: 24%;
+  flex-grow: 1;
+  display: block;
+  padding: 2rem;
+  aspect-ratio: 1618;
+  border: 0.5em double blue;
+}
+
+:not(body) > :is([draggable] + [draggable])::before {
+  content: "\00a0";
+}
+[droppable]:not(body) [draggable] {
+  margin: 0;
+  display: inline-block;
+}
